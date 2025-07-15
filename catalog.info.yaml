@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  annotations:
+    grafana/alert-label-selector: "service=awesome-service"
+    grafana/dashboard-selector: "(tags @> 'my-service' || tags @> 'my-service-slo') && tags @> 'generated'"
+    grafana/overview-dashboard: 'https://devopsanalytics-np.int.bayer.com/grafana/d/KGkUnV-Vz/dora-validation?orgId=1&kiosk'
+  name: my-entity
+  namespace: default
+spec:
+  profile:
+    displayName: Sathish Bayer
+    email: sathish@example.com
+  memberOf: [team-platform]
